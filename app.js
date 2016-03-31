@@ -12,6 +12,12 @@ import React, {
   Alert
 } from 'react-native';
 
+import Cells from './components/cell/cells';
+import Cell from './components/cell/cell';
+import CellHeader from './components/cell/cell_header';
+import CellBody from './components/cell/cell_body';
+import CellFooter from './components/cell/cell_footer';
+
 var Button = require("./components/button");
 
 class App extends Component {
@@ -27,6 +33,13 @@ class App extends Component {
         <Button type="primary" value="你好" onPress={this.onpress} disabled="true" style={{margin:5}}/>
         <Button type="warn" value="你好" onPress={this.onpress} style={{margin:5}}/>
         <Button type="warn" value="你好" onPress={this.onpress} disabled="true" style={{margin:5}}/>
+        <Cells>
+          <Cell>
+            <CellHeader><Text>text</Text></CellHeader>
+            <CellBody><Text>text</Text></CellBody>
+            <CellFooter><Text>text</Text></CellFooter>
+          </Cell>
+        </Cells>
       </View>
 
     );
